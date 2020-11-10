@@ -23,8 +23,6 @@ export default class Sort {
                 if( !mutation.addedNodes.length && !mutation.removedNodes.length ) continue;
                 if(this.elements.length == this.container.children.length - 1) continue;
 
-                console.log(this.elements, this.container.children)
-
                 this.unbind()
                 this.init()
                 this.bind()
@@ -141,7 +139,9 @@ export default class Sort {
             el.removeAttribute('data-active')
             this.container.appendChild(el)
         })
+
         if(this.onSort) this.onSort(this.elements)
+
         this.hr.style.opacity = 0
     }
 
@@ -162,8 +162,6 @@ export default class Sort {
         let sortedIndices = sortedElements.map(el => el.getAttribute('data-index'))
         let indices = this.elements.map(el => el.getAttribute('data-index'))
         if(sortedIndices.join() === indices.join()) return null;
-
-        console.log(sortedElements, this.elements)
 
         for(let index of sortedIndices){
             if(sortedIndices[index] === currentEl) return parseInt(index);
