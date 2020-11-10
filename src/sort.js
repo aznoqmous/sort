@@ -6,7 +6,7 @@ export default class Sort {
 
     constructor(container, config={}) {
 
-        for(let key in config) this[key] = config
+        for(let key in config) this[key] = config[key]
 
         this.container = container
 
