@@ -1,6 +1,13 @@
+/**
+ * Callbacks:
+ * - onSort(elements)
+ */
 export default class Sort {
 
-    constructor(container) {
+    constructor(container, config={}) {
+
+        for(let key in config) this[key] = config
+
         this.container = container
 
         this.container.style.userSelect = 'none'
@@ -134,6 +141,7 @@ export default class Sort {
             el.removeAttribute('data-active')
             this.container.appendChild(el)
         })
+        if(this.onSort) this.onSort(this.elements)
         this.hr.style.opacity = 0
     }
 
