@@ -45,7 +45,7 @@ export default class Sort {
                 let styles = {
                     'font-size': '0.8rem',
                     'letter-spacing': '-0.8em',
-                    transform: 'translate(0, -0.3em)',
+                    transform: 'translate(0, -0.4em)',
                     'writing-mode': 'vertical-lr',
                     cursor: 'n-resize',
                 }
