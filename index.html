@@ -12,12 +12,19 @@
 </head>
 <body>
     <ul id="list">
-        <li class="1">item 1 <span>sub 1</span></li>
+        <li class="1">item 1</li>
         <li class="2">item 2</li>
         <li class="3">item 3</li>
     </ul>
+    <button id="button">add element</button>
     <script type="text/javascript">
       new Sort(list)
+      button.addEventListener('click', ()=>{
+          let item = document.createElement('li')
+          item.className = list.children.length
+          item.innerHTML = `item ${list.children.length}`
+          list.appendChild(item)
+      })
     </script>
 </body>
 </html>
