@@ -2,7 +2,7 @@
 <head>
     <script src="dist/main.js"></script>
     <style>
-        .list > * {
+        #list > * {
             padding: 0.2rem 0.4rem;
             box-shadow: 0 0 2px rgba(0,0,0,0.2);
             margin-bottom: 0.2rem;
@@ -11,10 +11,13 @@
     </style>
 </head>
 <body>
-    <ul class="list">
-        <li>item 1 <span>sub 1</span></li>
-        <li>item 2</li>
-        <li>item 3</li>
+    <ul id="list">
+        <li class="1">item 1 <span>sub 1</span></li>
+        <li class="2">item 2</li>
+        <li class="3">item 3</li>
     </ul>
+    <script type="text/javascript">
+      new Sort(list)
+    </script>
 </body>
 </html>
